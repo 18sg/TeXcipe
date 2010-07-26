@@ -1,0 +1,42 @@
+\usepackage{longtable}
+\usepackage{booktabs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\deg}{$^\circ$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{recipe}[1]{
+	\subsection{#1}
+}{
+	
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{ingredients}[1]{
+	\vspace{10pt}
+	\begin{longtable}{ccccc l}
+		\toprule
+		1 & 2 & 3 & 4 & \textbf{5} & \\
+		\midrule
+}{
+		\bottomrule
+	\end{longtable}
+}
+
+\newcommand{\ingredient}[2]{
+	  &   &   &   & \textbf{#2} & #1 \\
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newenvironment{steps}{
+	\begin{enumerate}
+}{
+	\end{enumerate}
+}
+
+\newcommand{\step}{\item}
+\newcommand{\OR}{\par\emph{or} }
